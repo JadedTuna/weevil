@@ -1,13 +1,6 @@
 #include "kernel.h"
+#include "string.h"
 #include "vga_driver.h"
-
-size_t strlen(const char *s) {
-    size_t size = 0;
-    while (*s++ != '\0')
-        size++;
-
-    return size;
-}
 
 void print_center(const char *str, uint8_t color) {
     uint8_t row = 0, column = 0;
