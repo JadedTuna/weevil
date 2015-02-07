@@ -54,10 +54,6 @@ void terminal_clean(const uint8_t color) {
 void terminal_move(const uint8_t row, const uint8_t column) {
     uint16_t position = (row * VGA_WIDTH) + column;
 
-    /*
-     This is taken from wiki.osdev.org
-     WHY the second call should be IO_PORT + 1? Seems... weird...
-     */
     outb(VGA_IO_PORT, 0x0F);
     outb(VGA_IO_PORT + 1, (uint8_t) (position & 0xFF));
 
@@ -97,7 +93,7 @@ void terminal_putchar(const uint8_t character) {
     if (character == '\n') {
         // Newline
         terminal_column = 0;
-        if (++terminal_row >= VGA_HEIGHT) {
+        if (++terminal_row > VGA_HEIGHT) {
             terminal_row = VGA_HEIGHT - 1;
             terminal_scroll(1);
         }

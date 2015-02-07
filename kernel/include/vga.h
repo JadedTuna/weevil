@@ -30,7 +30,7 @@ typedef enum {
     VIDEO_MODE_MONOCHROME = 0x30,
 } VideoMode;
 
-// Video mode (color or monochrome)
+/* Video mode (color or monochrome) */
 VideoMode VGA_VIDEO_MODE;
 
 static const uint32_t VGA_ADDR_MONOCHROME = 0xB0000;
