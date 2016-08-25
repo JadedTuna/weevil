@@ -1,5 +1,5 @@
 # weevil
-Basic MS-DOS like operating system written in NASM and C.
+Basic MS-DOS like operating system written in NASM and C using the [OSdev tutorial](http://wiki.osdev.org/Meaty_Skeleton).
 
 # How-to
 To compile the kernel from source you need a [cross-compiler](http://wiki.osdev.org/GCC_Cross-Compiler). Compile it using `make` and then run using `make run`. You can also create an ISO file using `make iso`.
