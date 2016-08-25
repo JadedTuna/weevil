@@ -18,6 +18,14 @@ ARCHDIR = $(KERNELDIR)/arch/$(ARCH)
 
 LIBCDIR = libc
 
+help:
+	@echo -e "Available commands:"
+	@echo -e "\tall - compile the OS"
+	@echo -e "\tiso - create ISO file"
+	@echo -e "\trun - run the kernel .bin file using QEMU"
+	@echo -e "\tclean - clean up"
+	@echo -e "\thelp - show this help message"
+
 all: weevil.kernel
 
 weevil.kernel: compile_obj
